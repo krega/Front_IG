@@ -1,5 +1,8 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333; }
-
-/*# sourceMappingURL=style.css.map */
+@mixin image-hover($pokImage3) {
+	margin:0 auto;
+	width: 500px;
+	height: 400px;
+	transition: background-image .6s ease-in-out;
+	background-image: $pokImage3;
+	background-size: cover;
+}

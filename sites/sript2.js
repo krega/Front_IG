@@ -1,10 +1,15 @@
+
+function start(a){
 function asyncForEach(items, cb) {
     return items.reduce((p,c) => {
         return p.then(value => cb(c));
     }, Promise.resolve());
 }
 
-var items = [1,2,3,4,5,6,7,8,9,10];
+
+var items =  [a];
+console.log(a);
+
 
 function HamtaPokemon(z) {
     console.log(z);
@@ -20,8 +25,10 @@ function cb(z) {
             var pokName = 'pokName' + z;
             var pokImage = 'pokImage' + z;
             document.getElementById((pokId).toString()).innerHTML = data.id;
-            console.log(pokId);
-            document.getElementById((pokName).toString()).innerHTML = data.name;
+            
+            var tab[]=data.stats.base_stat;
+            console.log(tab);
+          //  document.getElementById((pokName).toString()).innerHTML = data.stats.base_stat;
             document.getElementById((pokImage).toString()).innerHTML = '<img src=http://img.pokemondb.net/artwork/' + data.name + '.jpg>';
        
         });
@@ -46,4 +53,5 @@ function HamtaPokemon(pokeid)
 
 	},"json");
 	return input;
+}
 }
