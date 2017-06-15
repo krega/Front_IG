@@ -1,44 +1,36 @@
-
 <!DOCTYPE html>
-<html ng-app="myApp">
-	<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script  src="script.js"></script>
+	<title>Pokemon</title>
+	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
-
 </head>
-	<script>
-	myApp=angular.module('myApp',[]);
-	myApp.controller('myController',function($scope,$http){
-		
-    		var mainInfo = null;
-			$http.get('http://pokeapi.co/api/v2/pokemon/1/').then(function(data) {
-    		mainInfo = data;
-    		console.log(mainInfo.data.name);
-			});
-		});
-				
-
-	</script>
-	</head>
-	<body ng-controller="myController">
-		
-	
-
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+<body>
+	<h1>Pokemon site</h1>
+	<form>
+	<input id="pokeid" type="text" name="">
+	<button id="knapp" type="button"> szukaj</button>
+	</form>
+	<img src="" id="pokemonbild">
+	<h3>aa</h3>
+	<h4>ss</h4>
+	<ol>
+	</ol>
+	<img id="spritefrint" src="">
+	<img id="spriteback" src="">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 
 <div class="container">
   <div class="row">
 
 
 
-   <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-10 col-md-offset-1">
 
       <div class="panel panel-default panel-table">
         <div class="panel-heading">
@@ -53,22 +45,22 @@
           <table class="table table-striped table-bordered table-list">
             <thead>
             <tr>
+           
              <th >ID</th>
-              <th>IMAGE</th> 
+               <th>IMAGE</th> 
               <th>Name</th>
               <th>HP</th>
             </tr>
             </thead>
-            <tbody ng-repeat = "metadata in mainInfo.data">
+            <tbody>
             <tr>
 
 
-             <td>
-             </td>
-              <td class="hidden-xs">{{metadata.id}}</td>
-              <td>{{metadata.name}}</td>
-
-              <td>{{metadata.hp}}</td>
+             
+              <td id="pokId">id</td>
+              <td height="1" width="1" id= "pokImage" >  </td>
+              <td   id="pokName" >name</td>
+              <td>hp</td>
             </tr>
             </tbody>
           </table>
@@ -76,7 +68,7 @@
         </div>
         <div class="panel-footer">
           <div class="row">
-            <div class="col col-xs-4">Page 1 of 10
+            <div class="col col-xs-4">Page 1 of 5
             </div>
             <div class="col col-xs-8">
               <ul class="pagination hidden-xs pull-right">
@@ -85,11 +77,6 @@
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><a href="#">9</a></li>
-                <li><a href="#">10</a></li>
               </ul>
               <ul class="pagination visible-xs pull-right">
                 <li><a href="#">«</a></li>
@@ -103,4 +90,4 @@
     </div></div></div>
 </body>
 </html>
-
+	
