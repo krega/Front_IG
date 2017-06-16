@@ -1,14 +1,10 @@
 
 function start(a){
-    function asyncForEach(items, cb) {
-        return items.reduce((p,c) => {
-            return p.then(value => cb(c));
-        }, Promise.resolve());
-    }
+cb(a);
+}
 
 
-    var items =  [a];
-    console.log(a);
+    
 
 
     function HamtaPokemon(z) {
@@ -22,17 +18,18 @@ function start(a){
         console.dir(data);
         var tab = [JSON.stringify(data.stats[0].base_stat)];
         console.log(tab);
-        document.getElementById("pokSpeed").innerHTML = JSON.stringify(data.stats[0].base_stat)
-        document.getElementById("pokAttack").innerHTML = JSON.stringify(data.stats[4].base_stat)
-        document.getElementById("pokDefence").innerHTML = JSON.stringify(data.stats[3].base_stat)
+        print(data);
        
         
     });
  }
-
- asyncForEach(items, cb)
- .then(result => console.log(result));
-
+function print(data)
+{
+  document.getElementById("pokSpeed").innerHTML = JSON.stringify(data.stats[0].base_stat)
+        document.getElementById("pokAttack").innerHTML = JSON.stringify(data.stats[4].base_stat)
+        document.getElementById("pokDefence").innerHTML = JSON.stringify(data.stats[3].base_stat)
+}
+ 
 
 
 
@@ -54,4 +51,3 @@ function start(a){
 
 
 
-}

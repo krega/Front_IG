@@ -1,8 +1,28 @@
-@mixin image-hover($pokImage3) {
-	margin:0 auto;
-	width: 500px;
-	height: 400px;
-	transition: background-image .6s ease-in-out;
-	background-image: $pokImage3;
-	background-size: cover;
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+
+$roboto-slab: 'Roboto Slab', serif;   
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #2ba6cb;
+
+
+.ff{
+		padding: 2500px;
+	}
+	.ff{
+		width: 10px;height: 10px;
+		transition: all 2s ease-in-put;
+		}
+	.ff:hover{
+			transform: rotate(180deg);
+		}	
+
+
+
+.table, table{
+	 
+font-family:$roboto-slab;;
+  font-weight: normal;
+
+   text-align: center;
 }

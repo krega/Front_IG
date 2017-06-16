@@ -19,11 +19,12 @@ function cb(z) {
             var pokId = 'pokId' + z;
             var pokName = 'pokName' + z;
             var pokImage = 'pokImage' + z;
+            var pokHP = 'HP' + z;
             document.getElementById((pokId).toString()).innerHTML = data.id;
             console.log(pokId);
             document.getElementById((pokName).toString()).innerHTML = data.name;
             document.getElementById((pokImage).toString()).innerHTML = '<img src=http://img.pokemondb.net/artwork/' + data.name + '.jpg>';
-       
+            document.getElementById((pokHP).toString()).innerHTML  = JSON.stringify(data.stats[5].base_stat)
         });
 }
 
@@ -36,7 +37,7 @@ asyncForEach(items, cb)
 function HamtaPokemon(pokeid)
 {
 	let adress="http://pokeapi.co/api/v2/"+"pokemon/"+pokeid+"/";
-	let input=$.get(adress,(data, status)=>{
+	var input=$.get(adress,(data, status)=>{
 		console.dir(data);
 		if(status=="success"){
 			return data;
