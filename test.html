@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>QUnit Example</title>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel = "stylesheet" href = "https://code.jquery.com/qunit/qunit-1.22.0.css">
-
-
-  <script src="sites/sript2.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="sites/sript2.js"></script>
 </head>
 <body>
   <div id="qunit"></div>
   <div id="qunit-fixture"></div>
   <script src="https://code.jquery.com/qunit/qunit-2.3.3.js"></script>
+  <table class="table table-striped table-bordered table-list" >
+    <div class="panel-body">
+      <table class="table table-striped table-bordered table-list">
+        <thead>
+          <tr>
+            <th >Speed</th>
+            <th>Attack</th> 
+            <th>Defence</th>
+            <th>Evolution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td  id="pokSpeed"></td>                                    
+            <td  id= "pokAttack"> attack </td>
+            <td  id="pokDefence">name</td>
+            <td  id="pokReference"> <a href="Charmeleon.html">Charmeleon</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+  </body>
+  <script src="src/theFunction.js"></script>
   <script>
-  var a=HamtaPokemon(1);
-  	console.log(a);
+QUnit.test("page should load with some values", function(assert)
+{
+  var fun= start(1);
+  console.log(fun);
+  assert.equal(fun, "1", "Page laod");
+  
+})
   </script>
- 
-</body>
-</html>
+  </html>

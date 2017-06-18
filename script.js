@@ -6,13 +6,13 @@ function asyncForEach(items, cb) {
 
 var items = [1,2,3,4,5,6,7,8,9,10];
 
-function HamtaPokemon(z) {
+function getPokemon(z) {
     console.log(z);
     return Promise.resolve(z);
 }
 
 function cb(z) {
-    return HamtaPokemon(z)
+    return getPokemon(z)
         .then(data => {
             console.dir(data);
            
@@ -25,7 +25,9 @@ function cb(z) {
             document.getElementById((pokName).toString()).innerHTML = data.name;
             document.getElementById((pokImage).toString()).innerHTML = '<img src=http://img.pokemondb.net/artwork/' + data.name + '.jpg>';
             document.getElementById((pokHP).toString()).innerHTML  = JSON.stringify(data.stats[5].base_stat)
+
         });
+        
 }
 
 asyncForEach(items, cb)
@@ -34,7 +36,7 @@ asyncForEach(items, cb)
 
 
 
-function HamtaPokemon(pokeid)
+function getPokemon(pokeid)
 {
 	let adress="http://pokeapi.co/api/v2/"+"pokemon/"+pokeid+"/";
 	var input=$.get(adress,(data, status)=>{

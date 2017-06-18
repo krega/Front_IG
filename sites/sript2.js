@@ -7,13 +7,13 @@ cb(a);
     
 
 
-    function HamtaPokemon(z) {
+    function getPokemon(z) {
         console.log(z);
         return Promise.resolve(z);
     }
 
     function cb(z) {
-     return HamtaPokemon(z)
+     return getPokemon(z)
      .then(data => {
         console.dir(data);
         var tab = [JSON.stringify(data.stats[0].base_stat)];
@@ -33,7 +33,7 @@ function print(data)
 
 
 
- function HamtaPokemon(pokeid)
+ function getPokemon(pokeid)
  {
   let adress="http://pokeapi.co/api/v2/"+"pokemon/"+pokeid+"/";
   let input=$.get(adress,(data, status)=>{
